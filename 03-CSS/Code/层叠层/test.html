@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+    <style>
+
+        /* 更改声明层的顺序 */
+        /* @layer yellow ,green,purple; */
+
+        /* 方法二，不分层的常规样式具有更高的优先级,但会低于重要声明*/
+        /* a{
+            color: rebeccapurple;
+        } */
+
+        @layer yellow, purple, green;
+
+        @layer yellow {
+            #outer div ul .nav a {
+                padding: 5px;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+
+        @layer purple {
+            div div li a {
+                /* 方法三: 使用重要声明 */
+                /* color: rebeccapurple !important; */
+                color: rebeccapurple ;
+            }
+        }
+
+        @layer green {
+            a {
+                color: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    在本任务中，我们希望您通过利用级联层部分的顺序来进行更改。<br>
+    编辑现有的声明，不接触浅绿色声明，使用级联层顺序使字体变为紫色。
+
+
+    <div id="outer" class="container">
+        <div id="inner" class="container">
+            <ul>
+                <!-- 方法四：内联声明优先级最高 -->
+                <!-- 重要的内联声明优先级更高，比分层中的重要声明还高。分层中的重要声明按先声明，先优先生效。 -->
+                <!-- <li class="nav"><a href="#" style="color: rebeccapurple;">One</a></li> -->
+                <li class="nav"><a href="#">One</a></li>
+                <li class="nav"><a href="#">Two</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

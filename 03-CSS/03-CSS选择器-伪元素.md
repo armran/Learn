@@ -44,7 +44,7 @@
 ```
 
 结果
-![伪元素-::after](img/伪元素-after.png)
+![伪元素-::after](img/伪元素/伪元素-after.png)
 
 ## ::before
 
@@ -112,7 +112,7 @@ list.addEventListener(
 结果
 下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的`::before`伪元素。接下来建立几个待办事项来完成它们吧。
 点击后
-![伪元素-::before](img/伪元素-before.png)
+![伪元素-::before](img/伪元素/伪元素-before.png)
 
 ## ::file-selector-button
 
@@ -279,7 +279,7 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 
 结果
 
-![伪元素-highlight](img/伪元素-highlight.png)
+![伪元素-highlight](img/伪元素/伪元素-highlight.png)
 
 ## ::marker
 
@@ -314,7 +314,7 @@ ul li::marker {
 
 结果
 
-![伪元素-marker](img/伪元素-marker.png)
+![伪元素-marker](img/伪元素/伪元素-marker.png)
 
 HTML
 
@@ -341,7 +341,7 @@ li::marker {
 ```
 
 结果
-![伪元素-marker2](img/伪元素-marker2.png)
+![伪元素-marker2](img/伪元素/伪元素-marker2.png)
 
 ## ::placeholder
 
@@ -363,7 +363,7 @@ input::placeholder {
 }
 ```
 
-![Alt text](img/伪元素-placeholder.png)
+![Alt text](img/伪元素/伪元素-placeholder.png)
 
 ## ::selection
 
@@ -416,4 +416,4 @@ p::selection {
 ```
 
 结果
-![Alt text](img/伪元素-selection.png)
+![Alt text](img/伪元素/伪元素-selection.png)

@@ -139,7 +139,7 @@ input:-webkit-autofill {
 }
 ```
 
-![伪类-autofill](img/伪类-autofill.png)
+![伪类-autofill](img/伪类/伪类-autofill.png)
 
 ## :checked
 
@@ -299,7 +299,7 @@ input:default + label {
 ```
 
 结果
-![伪类-default](img/伪类-default.png)
+![伪类-default](img/伪类/伪类-default.png)
 
 ## :dir()
 
@@ -387,7 +387,7 @@ function toggleBilling() {
 ```
 
 结果
-![伪类-disabled](img/伪类-disabled.png)
+![伪类-disabled](img/伪类/伪类-disabled.png)
 
 ## :empty
 
@@ -421,7 +421,7 @@ function toggleBilling() {
 ```
 
 结果
-![伪类-empty](img/伪类-empty.png)
+![伪类-empty](img/伪类/伪类-empty.png)
 
 ## :enabled
 
@@ -454,7 +454,7 @@ input:disabled {
 
 结果
 
-![伪类-enabled](img/伪类-enabled.png)
+![伪类-enabled](img/伪类/伪类-enabled.png)
 
 ## :first
 
@@ -534,7 +534,7 @@ p:first-child {
 ```
 
 结果
-![伪类-first-child1](img/伪类-first-child-1.png)
+![伪类-first-child1](img/伪类/伪类-first-child-1.png)
 
 样式化列表
 
@@ -565,7 +565,7 @@ ul li:first-child {
 ```
 
 结果
-![伪类-first-child-2](img/伪类-first-child-2.png)
+![伪类-first-child-2](img/伪类/伪类-first-child-2.png)
 
 ## :first-of-type
 
@@ -588,7 +588,7 @@ p:first-of-type {
 ```
 
 结果
-![伪类-first-of-type-1](img/first-of-type-1.png)
+![伪类-first-of-type-1](img/伪类/first-of-type-1.png)
 
 嵌套元素
 下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，通配符（*）是默认应用的。
@@ -613,7 +613,7 @@ article :first-of-type {
 ```
 
 结果
-![伪类-first-of-type-2](img/first-of-type-2.png)
+![伪类-first-of-type-2](img/伪类/first-of-type-2.png)
 
 ## :focus
 

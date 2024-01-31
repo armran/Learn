@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 在宽屏上，site 层在第一行被声明，这意味着 site 的优先权低于 page。 顺序，后面的优先级高
+        否则在窄屏上，site 的优先权高于 page，因为它在后面被声明。
+        如果不起作用，请将媒体查询中的 50em 改为 10em 或 100em。 */
+        @media (min-width: 50em) {
+            @layer site;
+        }
+    
+        @layer page {
+        h1 {
+            text-decoration: overline;
+            color: red;
+        }
+        }
+    
+        @layer site {
+        h1 {
+            text-decoration: underline;
+            color: green;
+        }
+        }
+    </style>
+
+</head>
+<body>
+        调整页面大小，颜色会变
+    <h1>Is this heading underlined?</h1>
+</body>
+</html>

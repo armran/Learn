@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过inline-block放大a标签的命中区域</title>
+    <style>
+        .links-list a {
+            background-color: rgb(179 57 81);
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+        }
+
+        .links-list a:hover {
+            background-color: rgb(66 28 40);
+            color: #fff;
+        }
+
+        .links-list {
+            border: 1px solid;
+            display: flex;
+            list-style-type: none;
+        }
+        li{
+            margin: 0px 15px 0px 15px;
+        }
+        nav{
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="links-list">
+            <li><a href="">Link one</a></li>
+            <li><a href="">Link two</a></li>
+            <li><a href="">Link three</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
