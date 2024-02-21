@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Flexbox: Task 3</title>
+
+  <style>
+    body {
+      background-color: #fff;
+      color: #333;
+      font:
+        1.2em / 1.5 Helvetica Neue,
+        Helvetica,
+        Arial,
+        sans-serif;
+      padding: 1em;
+      margin: 0;
+    }
+
+    .parent {
+      border: 2px solid #77a6b6;
+      border-radius: 0.5em;
+      width: 400px;
+      height: 300px;
+    }
+
+    .child {
+      background-color: #4d7298;
+      color: #fff;
+      padding: 0.5em;
+      width: 150px;
+    }
+
+    .parent{
+        display: flex;
+        justify-content :center ;
+        align-items: center;
+      }
+
+  </style>
+</head>
+
+<body>
+  在这个任务中，下面的HTML中有两个元素，一个是类为parent的＜div＞元素，
+  它包含另一个类为child的＜div＞元素。使用flexbox将子对象置于父对象的中心。请注意，这里并不是只有一个可能的解决方案。
+
+  <div class="parent">
+    <div class="child">Center me.</div>
+  </div>
+</body>
+
+</html>
