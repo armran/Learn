@@ -22,13 +22,13 @@ php版本为 php8(xampp v3.3.0) 和 php7(xampp v3.2.4中获取的)
 项目1：thinkcmf8 使用xampp v3.3.0 自带的php8 版本
 项目2：tk999 使用从 xampp v3.2.4 中的php7 版本 以前的项目
 
-![Alt text](image.png)
+![Alt text](img/image.png)
 
 ## 配置hosts
 
 文件地址： **C:\Windows\System32\drivers\etc**
 
-![Alt text](image-1.png)
+![Alt text](img/image-1.png)
 
 添加代码
 
@@ -37,25 +37,25 @@ php版本为 php8(xampp v3.3.0) 和 php7(xampp v3.2.4中获取的)
 127.0.0.1  www.tk999.com
 ```
 
-![Alt text](image-2.png)
+![Alt text](img/image-2.png)
 
 ## 下载不同版本的php
 
 php 为自带的 php8
 php7 为原 v3.2.4拷贝出来的php 改的名
 
-![Alt text](image-4.png)
+![Alt text](img/image-4.png)
 
 需要修改php7中的 php.ini 文件中的地址
 所有原来的地址为当前目录地址 如 原：C:\xampp\php7\ext 改为 E:\xampp\php7\ext
 php8的不用动，因为默认安装的时候就是E盘。
 
-![Alt text](image-6.png)
-![Alt text](image-5.png)
+![Alt text](img/image-6.png)
+![Alt text](img/image-5.png)
 
 ## 配置XAMPP
 
-![Alt text](image-3.png)
+![Alt text](img/image-3.png)
 
 ### 配置 httpd.conf
 
@@ -72,7 +72,11 @@ DocumentRoot "E:/xampp/htdocs"
 
 路径：E:\xampp\apache\conf\extra
 
-![Alt text](image-8.png)
+![Alt text](img/image-8.png)
+
+取消 `NameVirtualHost *:80` 前面的 ##
+
+![alt text](img/NameVirtualHost.png)
 
 最下方添加
 
@@ -93,7 +97,7 @@ DocumentRoot "E:/xampp/htdocs"
 </VirtualHost>
 ```
 
-![Alt text](image-9.png)
+![Alt text](img/image-9.png)
 
 ### 配置 httpd-xammp-conf
 
@@ -124,4 +128,4 @@ Action application/x-httpd-php7-cgi /php7/php-cgi.exe
 </Directory>
 ```
 
-![Alt text](image-7.png)
+![Alt text](img/image-7.png)
