@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            border: 1px solid;
+            margin: 10px;
+        }
+
+        div:nth-of-type(1) {
+            background: radial-gradient(circle at center, red 0, blue, green 100%);
+        }
+
+        div:nth-of-type(2) {
+            background: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
+        }
+
+        div:nth-of-type(3) {
+            background-image: radial-gradient(farthest-corner at 40px 40px,
+                    #f35 0%,
+                    #43e 100%);
+        }
+
+        div:nth-of-type(4) {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
+        }
+
+        div:nth-of-type(5) {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(at 0% 0%, red 10px, yellow 30%, #1e90ff 50%);
+        }
+
+        /* 椭圆渐变的 closet-side 值 */
+        div:nth-of-type(6) {
+            background: radial-gradient(ellipse closest-side,
+                    red,
+                    yellow 10%,
+                    #1e90ff 50%,
+                    beige);
+
+        }
+
+        /* 椭圆渐变的 farthest-corner 值 */
+        div:nth-of-type(7) {
+            background: radial-gradient(ellipse farthest-corner at 90% 90%,
+                    red,
+                    yellow 10%,
+                    #1e90ff 50%,
+                    beige);
+        }
+
+        /* 圆形渐变的 closet-side 值 */
+        div:nth-of-type(8) {
+            background: radial-gradient(circle closest-side at 25% 75%,
+                    red,
+                    yellow 10%,
+                    #1e90ff 50%,
+                    beige);
+        }
+
+        /* 椭圆形渐变长度或百分比 */
+        div:nth-of-type(9) {
+            background: radial-gradient(ellipse 50% 50px,
+                    red,
+                    yellow 10%,
+                    #1e90ff 50%,
+                    beige);
+        }
+
+        /* 圆形渐变的长度 */
+        div:nth-of-type(10) {
+            background: radial-gradient(circle 50px, red, yellow 10%, #1e90ff 50%, beige);
+        }
+
+        /* 堆叠径向渐变 */
+        div:nth-of-type(11) {
+            width: 150px;
+            height: 150px;
+            background:
+                radial-gradient(circle at 50% 0,
+                    rgba(255, 0, 0, 0.5),
+                    rgba(255, 0, 0, 0) 70.71%),
+                radial-gradient(circle at 6.7% 75%,
+                    rgba(0, 0, 255, 0.5),
+                    rgba(0, 0, 255, 0) 70.71%),
+                radial-gradient(circle at 93.3% 75%,
+                    rgba(0, 255, 0, 0.5),
+                    rgba(0, 255, 0, 0) 70.71%) beige;
+            border-radius: 50%;
+        }
+
+        /* div:nth-of-type(12) div:nth-of-type(13) */
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    椭圆渐变的 closet-side 值 <div></div>
+    椭圆渐变的 farthest-corner 值<div></div>
+    圆形渐变的 closet-side 值<div></div>
+    椭圆形渐变长度或百分比<div></div>
+    圆形渐变的长度<div></div>
+    堆叠径向渐变<div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

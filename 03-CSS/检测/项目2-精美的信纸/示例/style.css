@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Your CSS below here */
+
+article {
+  /* 多添加一个background声明，
+  仅添加顶部图片到信纸顶部，
+  以此作为不支持之前那种声明方式的浏览器的后备方案。 
+  因为优先级的原因，如果后边的声明不生效，就用前边的，所以放在上边*/
+  background: url(top-image.png) no-repeat top center;
+
+  /* 给信纸添加这样一个背景：
+      把之前下载的顶部图片固定到信纸顶部。
+      把之前下载的底部图片固定到信纸底部。
+      为了给信纸一点纹理，在前面背景的基础上添加一个半透明的渐变，使其在顶部和底部附近稍微变暗，但中间的大部分完全透明。 */
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(top-image.png) no-repeat top center,
+    url(bottom-image.png) no-repeat bottom center;
+
+  /* 给信纸添加一个白色的背景颜色。 */
+  background-color: white;
+
+  /* 给信纸添加一个 1mm 的上下实线边框，选一个符合信纸的颜色主题的边框颜色。 */
+  border-top: 1mm solid orange;
+  border-bottom: 1mm solid orange;
+}
+
+article h1 {
+  background-image: url(logo.png);
+  /* 向下和向右各偏移3像素、模糊半径为5像素的半透明黑色阴影 */
+  /* filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.7)); */
+  
+  border-radius: 64px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+  
+}

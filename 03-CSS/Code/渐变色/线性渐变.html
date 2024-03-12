@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            border: 1px solid;
+            margin: 10px;
+        }
+
+        div:nth-child(1) {
+            /* 渐变轴为 45 度，从蓝色渐变到红色 */
+            background: linear-gradient(45deg, blue, red);
+        }
+
+        div:nth-child(2) {
+            /* 从右下到左上、从蓝色渐变到红色 */
+            background: linear-gradient(to left top, blue, red);
+        }
+
+        div:nth-child(3) {
+            /* 色标：从下到上，从蓝色开始渐变，到高度 40% 位置是绿色渐变开始，最后以红色结束 */
+            background: linear-gradient(0deg, blue, green 40%, red);
+        }
+
+        div:nth-child(4) {
+            /* 颜色提示：从左到右的渐变，由红色开始，沿着渐变长度到 10% 的位置，然后在剩余的 90% 长度中变成蓝色 */
+            background: linear-gradient(.25turn, red, 10%, blue);
+        }
+
+        div:nth-child(5) {
+            /* 多位置色标：45% 倾斜的渐变，左下半部分为红色，右下半部分为蓝色，中间有一条硬线，在这里渐变由红色转变为蓝色 */
+            background: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+        }
+
+        div:nth-of-type(6) {
+            margin-top: 60px;
+            background: linear-gradient(red, orange, yellow, green, blue);
+        }
+
+        div:nth-of-type(7) {
+            background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+        }
+
+        div:nth-of-type(8) {
+            margin-top: 60px;
+            background: linear-gradient(red 10%, 30%, blue 90%);
+        }
+
+        div:nth-of-type(9) {
+            margin-top: 60px;
+            background: linear-gradient(red 40%, yellow 30%, blue 65%);
+        }
+
+        div:nth-of-type(10) {
+            margin-top: 60px;
+            background: linear-gradient(red 0%, orange 10%, orange 30%, yellow 50%, yellow 70%, green 90%, green 100%);
+        }
+
+        div:nth-of-type(11) {
+            background: linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%);
+        }
+
+        div:nth-of-type(12) {
+            background: linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
+        }
+
+        div:nth-of-type(13) {
+            margin-top: 60px;
+            background: linear-gradient(45deg, red, blue);
+        }
+
+        div:nth-of-type(14) {
+            margin-top: 60px;
+            background: linear-gradient(135deg, orange 60%, cyan);
+        }
+
+        div:nth-of-type(15) {
+            margin-top: 60px;
+            background: linear-gradient(to right,
+                    red 20%,
+                    orange 20% 40%,
+                    yellow 40% 60%,
+                    green 60% 80%,
+                    blue 80%);
+        }
+
+        div:nth-of-type(16) {
+            margin-top: 60px;
+            background: linear-gradient(217deg,
+                    rgba(255, 0, 0, 0.8),
+                    rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+                linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div>45 度渐变</div>
+    <div>从渐变线 60% 处开始的渐变</div>
+    <div>有多位置色标的渐变</div>
+    <div>堆叠渐变</div>
+</body>
+
+</html>
