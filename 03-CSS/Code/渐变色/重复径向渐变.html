@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            margin: 10px;
+        }
+
+        /* 黑白相间的渐变 */
+        div:nth-of-type(1) {
+            background: repeating-radial-gradient(black,
+                    black 5px,
+                    white 5px,
+                    white 10px);
+        }
+
+        /* Farthest-corner 渐变  */
+        div:nth-of-type(2) {
+            background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
+                    red,
+                    black 5%,
+                    blue 5%,
+                    green 10%);
+            background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
+                    red 0 5%,
+                    green 5% 10%);
+        }
+
+        /* 多个重复的径向渐变 */
+        div:nth-of-type(3) {
+            width: 200px;
+            height: 150px;
+            background:
+                repeating-radial-gradient(ellipse at 80% 50%,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5) 15px,
+                    rgba(255, 255, 255, 0.5) 15px,
+                    rgba(255, 255, 255, 0.5) 30px) top left no-repeat,
+                repeating-radial-gradient(ellipse at 20% 50%,
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5) 10px,
+                    rgba(255, 255, 255, 0.5) 10px,
+                    rgba(255, 255, 255, 0.5) 20px) top left no-repeat yellow;
+            background-size:
+                200px 200px,
+                150px 150px;
+        }
+
+        div:nth-of-type(4) {
+            background: repeating-radial-gradient(#e66465, #9198e5 20%);
+        }
+
+        div:nth-of-type(5) {
+            background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+        }
+
+        /* div:nth-of-type(6) {} */
+
+        /* div:nth-of-type(7) {}
+
+        div:nth-of-type(8) {}
+
+        div:nth-of-type(9) {}
+
+        div:nth-of-type(10) {}
+
+        div:nth-of-type(11) {} */
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

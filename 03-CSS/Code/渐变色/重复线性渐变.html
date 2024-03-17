@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            border: 1px solid;
+            margin: 10px;
+        }
+
+        /* 斑马条纹 */
+        div:nth-of-type(1) {
+            background-image: repeating-linear-gradient(-45deg,
+                    transparent,
+                    transparent 20px,
+                    black 20px,
+                    black 40px);
+            /* 包括多个色标长度 */
+            background-image: repeating-linear-gradient(-45deg,
+                    transparent 0 20px,
+                    black 20px 40px);
+        }
+
+        /* 十个重复的水平线  */
+        div:nth-of-type(2) {
+            background-image: repeating-linear-gradient(to bottom,
+                    rgb(26, 198, 204),
+                    rgb(26, 198, 204) 7%,
+                    rgb(100, 100, 100) 10%);
+        }
+
+        /* 多个线性渐变 */
+        div:nth-of-type(3) {
+            width: 600px;
+            height: 400px;
+            background: repeating-linear-gradient(190deg,
+                    rgba(255, 0, 0, 0.5) 40px,
+                    rgba(255, 153, 0, 0.5) 80px,
+                    rgba(255, 255, 0, 0.5) 120px,
+                    rgba(0, 255, 0, 0.5) 160px,
+                    rgba(0, 0, 255, 0.5) 200px,
+                    rgba(75, 0, 130, 0.5) 240px,
+                    rgba(238, 130, 238, 0.5) 280px,
+                    rgba(255, 0, 0, 0.5) 300px), repeating-linear-gradient(-190deg,
+                    rgba(255, 0, 0, 0.5) 30px,
+                    rgba(255, 153, 0, 0.5) 60px,
+                    rgba(255, 255, 0, 0.5) 90px,
+                    rgba(0, 255, 0, 0.5) 120px,
+                    rgba(0, 0, 255, 0.5) 150px,
+                    rgba(75, 0, 130, 0.5) 180px,
+                    rgba(238, 130, 238, 0.5) 210px,
+                    rgba(255, 0, 0, 0.5) 230px), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green 200px, blue 250px, indigo 300px, violet 350px, red 370px);
+        }
+
+        /* 格纹渐变 */
+        div:nth-of-type(4) {
+            width: 600px;
+            height: 400px;
+            background: repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 127, 0, 0.25) 50px,
+                    rgba(255, 127, 0, 0.25) 56px,
+                    transparent 56px,
+                    transparent 63px,
+                    rgba(255, 127, 0, 0.25) 63px,
+                    rgba(255, 127, 0, 0.25) 69px,
+                    transparent 69px,
+                    transparent 116px,
+                    rgba(255, 206, 0, 0.25) 116px,
+                    rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 127, 0, 0.25) 50px,
+                    rgba(255, 127, 0, 0.25) 56px,
+                    transparent 56px,
+                    transparent 63px,
+                    rgba(255, 127, 0, 0.25) 63px,
+                    rgba(255, 127, 0, 0.25) 69px,
+                    transparent 69px,
+                    transparent 116px,
+                    rgba(255, 206, 0, 0.25) 116px,
+                    rgba(255, 206, 0, 0.25) 166px), repeating-linear-gradient(-45deg,
+                    transparent,
+                    transparent 5px,
+                    rgba(143, 77, 63, 0.25) 5px,
+                    rgba(143, 77, 63, 0.25) 10px), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143,
+                        77,
+                        63,
+                        0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
+
+            background: repeating-linear-gradient(90deg,
+                    transparent 0 50px,
+                    rgba(255, 127, 0, 0.25) 50px 56px,
+                    transparent 56px 63px,
+                    rgba(255, 127, 0, 0.25) 63px 69px,
+                    transparent 69px 116px,
+                    rgba(255, 206, 0, 0.25) 116px 166px), repeating-linear-gradient(0deg,
+                    transparent 0 50px,
+                    rgba(255, 127, 0, 0.25) 50px 56px,
+                    transparent 56px 63px,
+                    rgba(255, 127, 0, 0.25) 63px 69px,
+                    transparent 69px 116px,
+                    rgba(255, 206, 0, 0.25) 116px 166px), repeating-linear-gradient(-45deg,
+                    transparent 0 5px,
+                    rgba(143, 77, 63, 0.25) 5px 10px), repeating-linear-gradient(45deg, transparent 0 5px, rgba(143,
+                        77,
+                        63,
+                        0.25) 5px 10px);
+        }
+
+        div:nth-of-type(5) {
+            background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+        }
+
+        div:nth-of-type(6) {
+            background: repeating-linear-gradient(transparent, #4d9f0c 40px),
+                repeating-linear-gradient(0.25turn, transparent, #3f87a6 20px);
+        }
+
+        /* div:nth-of-type(7) {}
+
+        div:nth-of-type(8) {}
+
+        div:nth-of-type(9) {}
+
+        div:nth-of-type(10) {}
+
+        div:nth-of-type(11) {} */
+    </style>
+</head>
+
+<body>
+    斑马条纹
+    <div></div>
+    十个重复的水平线<div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锥形渐变</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            border: 1px solid;
+            margin-bottom: 20px;
+        }
+
+        div:nth-of-type(1) {
+            background: conic-gradient(red, orange, yellow, green, blue);
+        }
+
+        div:nth-of-type(2) {
+            background: conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg);
+        }
+
+        div:nth-of-type(3) {
+            background: conic-gradient(red 40grad, 80grad, blue 360grad);
+        }
+
+        div:nth-of-type(4) {
+            background: conic-gradient(#fff 0.09turn, #bbb 0.09turn, #bbb 0.27turn, #666 0.27turn, #666 0.54turn, #000 0.54turn);
+
+        }
+
+        div:nth-of-type(5) {
+            background: conic-gradient(#fff 0turn 0.09turn, #bbb 0.09turn 0.27turn, #666 0.27turn 0.54turn, #000 0.54turn 1turn);
+            ;
+        }
+
+        div:nth-of-type(6) {
+            background: conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
+        }
+
+        div:nth-of-type(7) {
+            background: conic-gradient(#fff 90deg, #000 0.25turn 0.5turn, #fff 1rad 1.5rad, #000 300grad);
+            background-size: 25% 25%;
+        }
+
+        /* 40 度渐变 */
+        div:nth-of-type(8) {
+            background-image: conic-gradient(from 40deg, #fff, #000);
+        }
+
+        /* 偏移中心的渐变 */
+        div:nth-of-type(9) {
+            background: conic-gradient(from 0deg at 0% 25%, blue, green, yellow 180deg);
+        }
+
+        /* 渐变饼图 */
+        div:nth-of-type(10) {
+            height: 200px;
+            width: 200px;
+            background: conic-gradient(red 36deg, orange 36deg 170deg, yellow 170deg);
+            border-radius: 50%;
+        }
+
+        /* 棋盘格 */
+        div:nth-of-type(11) {
+            height: 200px;
+            width: 200px;
+            background: conic-gradient(#fff 0.25turn,
+                    #000 0.25turn 0.5turn,
+                    #fff 0.5turn 0.75turn,
+                    #000 0.75turn) top left / 25% 25% repeat;
+            border: 1px solid;
+        }
+
+        /* 改变角度 */
+        div:nth-of-type(12) {
+            background: conic-gradient(from 45deg, red, orange 50%, yellow 85%, green);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
