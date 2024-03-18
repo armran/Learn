@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阴影</title>
+    <style>
+        div {
+            display: flex;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        div div {
+            /* background-image: url(/03-CSS/img/阴影/原始图片.png); */
+            background-image: url(./../../img/阴影/原始图片.png);
+            width: 200px;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid;
+        }
+
+
+        div:nth-of-type(1) div:nth-of-type(2) {
+            filter: blur(5px);
+        }
+
+        div:nth-of-type(1) div:nth-of-type(3) {
+            filter: blur(1.5rem);
+        }
+
+        div:nth-of-type(2) div:nth-of-type(2) {
+            filter: brightness(2);
+        }
+
+        div:nth-of-type(2) div:nth-of-type(3) {
+            filter: brightness(0.3);
+        }
+
+        div:nth-of-type(3) div:nth-of-type(2) {
+            filter: contrast(200%);
+        }
+
+        div:nth-of-type(3) div:nth-of-type(3) {
+            filter: contrast(0.5);
+        }
+
+        div:nth-of-type(4) div:nth-of-type(1) {
+            filter: drop-shadow(30px 10px 4px #4444dd);
+            margin-right: 50px;
+        }
+
+        div:nth-of-type(4) div:nth-of-type(2) {
+            filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+        }
+
+        div:nth-of-type(4) div:nth-of-type(3) {
+            filter: drop-shadow(0 0 0.75rem crimson);
+        }
+
+        div:nth-of-type(5) div:nth-of-type(2) {
+            filter: grayscale(.7)
+        }
+
+        div:nth-of-type(5) div:nth-of-type(3) {
+            filter: grayscale(100%)
+        }
+
+        div:nth-of-type(6) div:nth-of-type(1) {
+            filter: hue-rotate(90deg);
+        }
+
+        div:nth-of-type(6) div:nth-of-type(2) {
+            filter: hue-rotate(-0.25turn);
+        }
+
+        div:nth-of-type(6) div:nth-of-type(3) {
+            filter: hue-rotate(3.142rad);
+        }
+
+        div:nth-of-type(7) div:nth-of-type(1) {
+            filter: invert(0.30);
+        }
+
+        div:nth-of-type(7) div:nth-of-type(2) {
+            filter: invert(50%);
+        }
+
+        div:nth-of-type(7) div:nth-of-type(3) {
+            filter: invert(70%);
+        }
+
+        div:nth-of-type(7) div:nth-of-type(4) {
+            filter: invert(1);
+        }
+
+        div:nth-of-type(8) div:nth-of-type(1) {
+            filter: opacity(80%);
+        }
+
+        div:nth-of-type(8) div:nth-of-type(2) {
+            filter: opacity(50%);
+        }
+
+        div:nth-of-type(8) div:nth-of-type(3) {
+            filter: opacity(0.20);
+        }
+
+        div:nth-of-type(8) div:nth-of-type(4) {
+            filter: opacity(0);
+        }
+
+        div:nth-of-type(9) div:nth-of-type(1) {
+            filter: saturate(4);
+        }
+
+        div:nth-of-type(9) div:nth-of-type(2) {
+            filter: saturate(50%);
+        }
+
+        div:nth-of-type(9) div:nth-of-type(3) {
+            filter: saturate(0);
+        }        div:nth-of-type(10) div:nth-of-type(1) {
+            filter: sepia(0.20);
+        }
+
+        div:nth-of-type(10) div:nth-of-type(2) {
+            filter: sepia(60%);
+        }
+
+        div:nth-of-type(10) div:nth-of-type(3) {
+            filter: sepia(1);
+        }
+    </style>
+</head>
+
+<body>
+    1：模糊<div>
+        <div></div>
+        <div>filter: blur(5px);</div>
+        <div>filter: blur(1.5rem);</div>
+    </div>
+    2：曝光<div>
+        <div></div>
+        <div>filter: brightness(2);</div>
+        <div>filter: brightness(0.3);</div>
+    </div>
+    3：对比度<div>
+        <div></div>
+        <div>filter: contrast(200%);</div>
+        <div> filter: contrast(0.5);</div>
+    </div>
+    4：投影<div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    5：灰度转换<div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    6：反转色调<div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    7：反转输入图像中的颜色样本<div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    8：透明度<div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> 9：饱和度<div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> 10：深褐色<div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
