@@ -1,0 +1,39 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+
+div {
+  /* 一个对于大按钮来说合理的宽度，200 像素左右。 */
+  width: 200px;
+  /* 一个对于大按钮来说合理的高度，并使文本纵向居中。 */
+  height: 150px;
+  /* 居中文本。 */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* 用 rem 使字体稍大一点，大约 17-18 像素，在注释里说说你的值是怎么算出来的。 */
+  /* 根元素大小一般为16px，1.1rem=17.6px。 */
+  font-size: 1.1rem;
+  /* 给你的设计定一个基础颜色，把它作为盒子的背景颜色。 */
+  background-color: red;
+  /* 把字体颜色设为同一个颜色，使用黑色的文字阴影增加可读性。 */
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  /* 一个精巧的圆角边框。 */
+  border-radius: 10px;
+  /* 一个跟基础颜色相近、1 像素宽的实线边框，颜色要稍深一点。 */
+  border: 1px solid #990000;
+
+  /* 一个指向右下角的黑色半透明线性渐变，让它在开始的时候完全透明，在30% 的处渐变到 0.2 的不透明度，然后保持相同颜色到最后。 */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+  inset -2px -2px 3px rgba(0, 0, 0, 0.6), 2px 2px 5px black;
+}
