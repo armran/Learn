@@ -2,12 +2,14 @@
 
 ```html
 <table>
+
+    如果css有定义样式，colgroup 就不会生效
     <colgroup>
         <col />
         <col style="background-color: yellow" />
     </colgroup>
     <caption>
-    这是标题
+        这是标题
     </caption>
 
     <thead> 表头
@@ -16,7 +18,7 @@
             <th id="location">Location</th>
         </tr>
     </thead>
-    <tfoot> 表尾</tfoot>
+
     <tbody> 
         <tr>
             <th>Data 1</th>
@@ -31,5 +33,7 @@
             <td>Jazz</td>
         </tr>
     </tbody> 
+    
+    <tfoot> 表尾</tfoot>
 </table>
 ```
