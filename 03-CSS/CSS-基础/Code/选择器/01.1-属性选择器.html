@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* edge 不支持嵌套选择器，部分属性对嵌套属性也不支持 */
+
+        a {
+            color: blue;
+        }
+
+        /* 以 "#" 开头的页面内部链接 */
+        a[href^="#"] {
+            background-color: gold;
+        }
+
+        /* 包含 "example" 的链接 */
+        a[href*="example"] {
+            background-color: silver;
+        }
+
+        /* 包含 "insensitive" 的链接，不区分大小写 */
+        a[href*="insensitive" i] {
+            color: cyan;
+        }
+
+        /* 包含 "cAsE" 的链接，区分大小写 */
+        a[href*="cAsE" s] {
+            color: pink;
+        }
+
+        /* 以 ".org" 结尾的链接 */
+        a[href$=".org"] {
+            color: red;
+        }
+
+        /* 以 "https" 开始，".org" 结尾的链接 */
+        a[href^="https"][href$=".org"] {
+            color: green;
+        }
+
+
+
+        /* 将所有包含 `lang` 属性的 <div> 元素的字重设为 bold */
+        div[lang] {
+            font-weight: bold;
+        }
+
+        /* 将所有语言为美式英语的 <div> 元素的文本颜色设为蓝色 */
+        div[lang~="en-us"] {
+            color: blue;
+        }
+
+        /* 将所有语言为葡萄牙语的 <div> 元素的文本颜色设为绿色 */
+        div[lang="pt"] {
+            color: green;
+        }
+
+        /* 将所有语言为中文的 <div> 元素的文本颜色设为红色
+   无论是简体中文（zh-CN）还是繁体中文（zh-TW） */
+        div[lang|="zh"] {
+            color: red;
+        }
+
+        /* 将所有 `data-lang` 属性的值为 "zh-TW" 的 <div> 元素的文本颜色设为紫色 */
+        /* 备注：和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
+        div[data-lang="zh-TW"] {
+            color: purple;
+        }
+
+
+        /* 根据文档语言不同，大小写敏感性不同 */
+        ol[type="a"] {
+            list-style-type: lower-alpha;
+            background: red;
+        }
+
+        ol[type="b" s] {
+            list-style-type: lower-alpha;
+            background: lime;
+        }
+
+        ol[type="B" s] {
+            list-style-type: upper-alpha;
+            background: grey;
+        }
+
+        ol[type="c" i] {
+            list-style-type: upper-alpha;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo1">
+        <ul>
+            <li><a href="#internal">内部链接</a></li>
+            <li><a href="http://example.com">示例链接</a></li>
+            <li><a href="#InSensitive">非敏感内部链接</a></li>
+            <li><a href="http://example.org">示例 org 链接</a></li>
+            <li><a href="https://example.org">示例 https org 链接</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="demo2">
+        <div lang="en-us en-gb en-au en-nz">Hello World!</div>
+        <div lang="pt">Olá Mundo!</div>
+        <div lang="zh-CN">世界你好！</div>
+        <div lang="zh-TW">世界你好！</div>
+        <div data-lang="zh-TW">世界你好！</div>
+    </div>
+    <hr>
+    <div id="demo3">
+        <ol type="A">
+            <li>非大小写敏感匹配呈现红色背景（类型选择器默认值）</li>
+        </ol>
+        <ol type="b">
+            <li>如果支持 `s` 修饰符（大小写敏感匹配），拥有亮绿色背景</li>
+        </ol>
+        <ol type="B">
+            <li>如果支持 `s` 修饰符（大小写敏感匹配），拥有灰色背景</li>
+        </ol>
+        <ol type="C">
+            <li>如果支持 `i` 修饰符（大小写不敏感匹配），拥有绿色背景</li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>

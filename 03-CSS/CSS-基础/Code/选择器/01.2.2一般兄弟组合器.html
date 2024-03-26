@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: solid black;
+
+            div {
+                border: solid red;
+            }
+        }
+
+        /* <div>下一级的所有<span>标签 只有一层*/
+        div>span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <span>span</span>
+        <div>div
+            <span>span
+                <span>span-span</span>
+            </span>
+        </div>
+
+        <span>span</span><br>
+        <span>span</span>
+        <p>p<span>p-span</span></p>
+    </div>
+
+</body>
+
+</html>
