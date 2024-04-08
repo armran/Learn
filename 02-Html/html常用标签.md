@@ -12,6 +12,7 @@
 <hr>：主题性中断元素——水平线
 
 
+
 列表
 无序列表
 <ul>
@@ -41,6 +42,22 @@
 
 <!-- 为了链接到那个特定的 id，要将它放在 URL 的末尾，并在前面包含井号（#） -->
 <a href="contacts.html#Mailing_address">我们的地址</a>。
+```
+
+## select
+
+```html
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
 ```
 
 ## 缩进
@@ -153,8 +170,8 @@ para.onclick = function() {
 <samp>PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 
-
 ## 标记时间和日期
+
 HTML 还支持将时间和日期标记为可供机器识别的格式的 <time> 元素，例如：
 
 ```HTML
@@ -179,6 +196,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 <time> �
 <!-- 提及特定周 -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
+
 为什么需要这样做？因为世界上有许多种书写日期的格式，上边的日期可能被写成：
 
 - 20 January 2016
